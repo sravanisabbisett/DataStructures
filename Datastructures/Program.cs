@@ -6,7 +6,13 @@ namespace Datastructures
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LinkedList linkedList = new LinkedList();
+            linkedList.add(70);
+            linkedList.add(30);
+            linkedList.add(56);
+            Console.WriteLine("Add the dat at top");
+            linkedList.Display();
+            Console.ReadKey();
         }
     }
 }
