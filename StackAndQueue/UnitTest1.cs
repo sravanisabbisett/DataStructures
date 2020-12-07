@@ -75,6 +75,23 @@ namespace StackAndQueue
             bool result = stack.IsEmpty();
             Assert.IsTrue(result);
         }
+
+        //Queue
+        [TestMethod]
+        public void AddElementsinQueue()
+        {
+            Queue queue = new Queue();
+            int myFirstElement = 56;
+            int mySecondElement = 30;
+            int myThirdElement = 70;
+            queue.Enqueue(myFirstElement);
+            queue.Enqueue(mySecondElement);
+            queue.Enqueue(myThirdElement);
+            queue.Dequeue();
+            bool result=queue.IsEmpty();
+            Assert.IsTrue(result);
+
+        }
     }
 }
 
