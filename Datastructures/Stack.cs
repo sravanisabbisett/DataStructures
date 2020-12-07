@@ -51,10 +51,25 @@ namespace Datastructures
                 Pop();
             }
         }
-
+        /// <summary>
+        /// returns the size of an stack.
+        /// </summary>
+        /// <returns></returns>
         public int Size()
         {
             return linkedList.Size();
+        }
+
+        public bool IsEmpty()
+        {
+            if (Size() == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
