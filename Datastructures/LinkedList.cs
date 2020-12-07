@@ -174,20 +174,7 @@ namespace Datastructures
             }
             return 0;
         }
+
         
-        public int CheckFirstElement()
-        {
-            return this.head.data;
-        }
-
-        public int CheckLastElement()
-        {
-            return this.tail.data;
-        }
-
-        public int CheckMiddleElement()
-        {
-            return this.head.next.data;
-        }
     }
 }

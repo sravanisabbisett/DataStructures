@@ -7,15 +7,14 @@ namespace Datastructures
         static void Main(string[] args)
         {
             LinkedList linkedList = new LinkedList();
-            linkedList.add(70);
-            linkedList.add(30);
-            linkedList.add(56);
-            Console.WriteLine("Add the dat at top");
-            linkedList.Display();
-            Console.WriteLine("checking first element" + linkedList.CheckFirstElement());
-            Console.WriteLine("checking last element" + linkedList.CheckLastElement());
-            Console.WriteLine("Checking Middle elemnet" + linkedList.CheckMiddleElement()); 
-            linkedList.PopLast();
+            int myFirstNode = 56;
+            int mySecondNode = 30;
+            int myThirdNode = 40;
+            int myFourthNode = 70;
+            linkedList.append(myFirstNode);
+            linkedList.append(mySecondNode);
+            linkedList.append(myFourthNode);
+            linkedList.Insert(3, myThirdNode);
             linkedList.Display();
             Console.ReadKey();
         }

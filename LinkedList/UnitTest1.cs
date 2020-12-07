@@ -23,14 +23,11 @@ namespace LinkedListTest
             int myFirstNode = 70;
             int mySecndNode = 30;
             int myThirdNode = 56;
-
             linkedList.add(70);
             linkedList.add(30);
             linkedList.add(56);
-            int firstNode = linkedList.CheckFirstElement();
-            int secondNode = linkedList.CheckMiddleElement();
-            int thirdNode = linkedList.CheckLastElement();
-            bool result = firstNode.Equals(myThirdNode) && secondNode.Equals(mySecndNode) && thirdNode.Equals(myFirstNode);
+            bool result=linkedList.head.data.Equals(myThirdNode) && linkedList.head.next.data.Equals(mySecndNode) 
+                                                                    && linkedList.tail.data.Equals(myFirstNode);
             Assert.IsTrue(result);
         }
 
@@ -43,15 +40,11 @@ namespace LinkedListTest
             int myFirstNode = 56;
             int mySecondNode = 30;
             int myThirdNode = 70;
-
             linkedList.append(myFirstNode);
             linkedList.append(mySecondNode);
             linkedList.append(myThirdNode);
-            int firstNode = linkedList.CheckFirstElement();
-            int secondNode = linkedList.CheckMiddleElement();
-            int thirdNode = linkedList.CheckLastElement();
-
-            bool result= firstNode.Equals(myFirstNode) && secondNode.Equals(mySecondNode) && thirdNode.Equals(myThirdNode);
+            bool result = linkedList.head.data.Equals(myFirstNode) && linkedList.head.next.data.Equals(mySecondNode) 
+                                                                    && linkedList.tail.data.Equals(myThirdNode);
             Assert.IsTrue(result);
         }
 
@@ -68,9 +61,9 @@ namespace LinkedListTest
             linkedList.append(myFirstNode);
             linkedList.append(myThirdNode);
             linkedList.Insert(2, mySecondNode);
+            bool result = linkedList.head.data.Equals(myFirstNode) && linkedList.head.next.data.Equals(mySecondNode)
+                                                                    && linkedList.tail.data.Equals(myThirdNode);
 
-            int secondNode = linkedList.CheckMiddleElement();
-            bool result = mySecondNode.Equals(secondNode);
             Assert.IsTrue(result);
         }
 
@@ -83,13 +76,11 @@ namespace LinkedListTest
             int myFirstNode = 56;
             int mySecondNode = 30;
             int myThirdNode = 70;
-
             linkedList.append(myFirstNode);
             linkedList.append(mySecondNode);
             linkedList.append(myThirdNode);
             linkedList.pop();
-            int firstNode = linkedList.CheckFirstElement();
-            bool result = firstNode.Equals(mySecondNode);
+            bool result = linkedList.head.data.Equals(mySecondNode);
             Assert.IsTrue(result);
         
         }
@@ -103,13 +94,11 @@ namespace LinkedListTest
             int myFirstNode = 56;
             int mySecondNode = 30;
             int myThirdNode = 70;
-
             linkedList.append(myFirstNode);
             linkedList.append(mySecondNode);
             linkedList.append(myThirdNode);
             linkedList.PopLast();
-            int tail = linkedList.CheckLastElement();
-            bool result = tail.Equals(mySecondNode);
+            bool result = linkedList.tail.data.Equals(mySecondNode);
             Assert.IsTrue(result);
         }
 
@@ -128,7 +117,24 @@ namespace LinkedListTest
             int searchElement=linkedList.search(mySecondNode);
             Assert.AreEqual(mySecondNode, searchElement);
         }
-        
+
+        /// <summary>
+        /// Inserts the in middle.
+        /// </summary>
+        [TestMethod]
+        public void InsertInmiddle()
+        {
+            int myFirstNode = 56;
+            int mySecondNode = 30;
+            int myThirdNode = 40;
+            int myFourthNode = 70;
+            linkedList.append(myFirstNode);
+            linkedList.append(mySecondNode);
+            linkedList.append(myFourthNode);
+            linkedList.Insert(3, myThirdNode);
+            int searchResult = linkedList.search(myThirdNode);
+            Assert.AreEqual(myThirdNode, searchResult);
+        }
 
     }
 }
