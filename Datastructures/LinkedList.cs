@@ -54,5 +54,42 @@ namespace Datastructures
                 }
             }
         }
+
+        /// <summary>
+        /// Appends the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public void append(int data)
+        {
+            Node node = new Node(data);
+            if (this.head == null)
+            {
+                this.head = node;
+            }
+            if (this.tail == null)
+            {
+                this.tail = node;
+            }
+            else
+            {
+                this.tail.next = node;
+                this.tail = node;
+            }
+        }
+
+        public int CheckFirstElement()
+        {
+            return this.head.data;
+        }
+
+        public int CheckLastElement()
+        {
+            return this.tail.data;
+        }
+
+        public int CheckMiddleElement()
+        {
+            return this.head.next.data;
+        }
     }
 }
