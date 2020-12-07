@@ -52,5 +52,14 @@ namespace Datastructures
         {
             stack.EmptyingTheStack();
         }
+
+        /// <summary>
+        /// Sizes this instance.
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            return LinkedList.Size();
+        }
     }
 }

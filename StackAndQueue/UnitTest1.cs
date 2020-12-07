@@ -92,6 +92,20 @@ namespace StackAndQueue
             Assert.IsTrue(result);
 
         }
+
+        [TestMethod]
+        public void SizeofAnQueue()
+        {
+            Queue queue = new Queue();
+            int myFirstElement = 56;
+            int mySecondElement = 30;
+            int myThirdElement = 70;
+            queue.Enqueue(myFirstElement);
+            queue.Enqueue(mySecondElement);
+            queue.Enqueue(myThirdElement);
+            int size = queue.Size();
+            Assert.AreEqual(3, size);
+        }
     }
 }
 
