@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1300
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datastructures", "Datastructures\Datastructures.csproj", "{124F8AB2-E9FC-44B4-8FB3-D215A4139782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datastructures", "Datastructures\Datastructures.csproj", "{124F8AB2-E9FC-44B4-8FB3-D215A4139782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListTest", "LinkedList\LinkedListTest.csproj", "{BBF6BE6E-5850-475A-948C-59B130AA2829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedListTest", "LinkedList\LinkedListTest.csproj", "{BBF6BE6E-5850-475A-948C-59B130AA2829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackAndQueue", "StackAndQueue\StackAndQueue.csproj", "{CD665462-F211-492F-ADAB-B904364BBDB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BBF6BE6E-5850-475A-948C-59B130AA2829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBF6BE6E-5850-475A-948C-59B130AA2829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBF6BE6E-5850-475A-948C-59B130AA2829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD665462-F211-492F-ADAB-B904364BBDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD665462-F211-492F-ADAB-B904364BBDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD665462-F211-492F-ADAB-B904364BBDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD665462-F211-492F-ADAB-B904364BBDB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

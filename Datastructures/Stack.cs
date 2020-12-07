@@ -21,7 +21,16 @@ namespace Datastructures
         {
             Node node = new Node(data);
             linkedList.Add(data);
+
         }
 
+        /// <summary>
+        /// Returns the first element
+        /// </summary>
+        /// <returns></returns>
+        public int Peek()
+        {
+            return this.linkedList.head.data;
+        }
     }
 }
