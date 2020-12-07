@@ -155,6 +155,25 @@ namespace Datastructures
                 return finalNode;
             }
         }
+
+        /// <summary>
+        /// Searches the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        public int search(int data)
+        {
+            Node temp = head;
+            while(temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return temp.data;
+                }
+                temp = temp.next;
+            }
+            return 0;
+        }
         
         public int CheckFirstElement()
         {
