@@ -40,5 +40,21 @@ namespace Datastructures
         {
             linkedList.Pop();
         }
+
+        /// <summary>
+        /// Emptyings the stack.
+        /// </summary>
+        public void EmptyingTheStack()
+        {
+            while (Size()!=0)
+            {
+                Pop();
+            }
+        }
+
+        public int Size()
+        {
+            return linkedList.Size();
+        }
     }
 }
