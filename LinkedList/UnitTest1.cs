@@ -93,5 +93,24 @@ namespace LinkedListTest
             Assert.IsTrue(result);
         
         }
+
+        /// <summary>
+        /// UC6 Removes the last element in the list.
+        /// </summary>
+        [TestMethod]
+        public void RemoveLastElementInTheList()
+        {
+            int myFirstNode = 56;
+            int mySecondNode = 30;
+            int myThirdNode = 70;
+
+            linkedList.append(myFirstNode);
+            linkedList.append(mySecondNode);
+            linkedList.append(myThirdNode);
+            linkedList.PopLast();
+            int tail = linkedList.CheckLastElement();
+            bool result = tail.Equals(mySecondNode);
+            Assert.IsTrue(result);
+        }
     }
 }

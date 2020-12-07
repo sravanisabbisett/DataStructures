@@ -15,7 +15,7 @@ namespace Datastructures
             Console.WriteLine("checking first element" + linkedList.CheckFirstElement());
             Console.WriteLine("checking last element" + linkedList.CheckLastElement());
             Console.WriteLine("Checking Middle elemnet" + linkedList.CheckMiddleElement()); 
-            linkedList.pop();
+            linkedList.PopLast();
             linkedList.Display();
             Console.ReadKey();
         }

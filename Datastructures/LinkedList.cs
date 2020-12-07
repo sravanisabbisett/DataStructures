@@ -131,6 +131,31 @@ namespace Datastructures
             return tempNode;
         }
 
+        /// <summary>
+        /// Pops the last element in the list
+        /// </summary>
+        /// <returns></returns>
+        public Node PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+                return null;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                Node finalNode = temp.next;
+                temp.next = null;
+                this.tail = temp;
+                return finalNode;
+            }
+        }
+        
         public int CheckFirstElement()
         {
             return this.head.data;
