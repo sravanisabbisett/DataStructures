@@ -32,5 +32,13 @@ namespace Datastructures
         {
             return this.linkedList.head.data;
         }
+
+        /// <summary>
+        /// Deletes the firstElement.
+        /// </summary>
+        public void Pop()
+        {
+            linkedList.Pop();
+        }
     }
 }
