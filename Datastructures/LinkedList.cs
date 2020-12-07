@@ -18,7 +18,7 @@ namespace Datastructures
         /// Adds the data at the data.
         /// </summary>
         /// <param name="data">The data.</param>
-        public void add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (this.tail == null)
@@ -59,7 +59,7 @@ namespace Datastructures
         /// Appends the specified data.
         /// </summary>
         /// <param name="data">The data.</param>
-        public void append(int data)
+        public void Append(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -118,7 +118,7 @@ namespace Datastructures
         /// Pops this instance.
         /// </summary>
         /// <returns></returns>
-        public Node pop()
+        public Node Pop()
         {
             if (head == null)
             {
@@ -161,7 +161,7 @@ namespace Datastructures
         /// </summary>
         /// <param name="data">The data.</param>
         /// <returns></returns>
-        public int search(int data)
+        public int Search(int data)
         {
             Node temp = head;
             while(temp != null)
@@ -175,6 +175,41 @@ namespace Datastructures
             return 0;
         }
 
-        
+        /// <summary>
+        /// Deletes the specified item in list.
+        /// </summary>
+        /// <param name="item">The item.</param>
+        public void Delete(int element)
+        {
+            Node temp = head, previous = null;
+            if (temp != null && temp.data == element)
+            {
+                head = temp.next;
+                return;
+            }
+            while (temp != null && temp.data != element)
+            {
+                previous = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+            previous.next = temp.next;
+        }
+        /// <summary>
+        /// Sizes this list.
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            Node tempNode = this.head;
+            int size = 0;
+            while (tempNode != null)
+            {
+                size++;
+                tempNode = tempNode.next;
+            }
+            return size;
+        }
     }
 }

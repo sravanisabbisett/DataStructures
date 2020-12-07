@@ -11,11 +11,12 @@ namespace Datastructures
             int mySecondNode = 30;
             int myThirdNode = 40;
             int myFourthNode = 70;
-            linkedList.append(myFirstNode);
-            linkedList.append(mySecondNode);
-            linkedList.append(myFourthNode);
+            linkedList.Append(myFirstNode);
+            linkedList.Append(mySecondNode);
+            linkedList.Append(myFourthNode);
             linkedList.Insert(3, myThirdNode);
             linkedList.Display();
+            Console.WriteLine("size:" + linkedList.Size());
             Console.ReadKey();
         }
     }
