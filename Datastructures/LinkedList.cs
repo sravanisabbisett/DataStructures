@@ -114,6 +114,23 @@ namespace Datastructures
             }
         }
 
+        /// <summary>
+        /// Pops this instance.
+        /// </summary>
+        /// <returns></returns>
+        public Node pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("No elemnent in list");
+                return null;
+            }
+
+            Node tempNode = head;
+            head = head.next;
+            return tempNode;
+        }
+
         public int CheckFirstElement()
         {
             return this.head.data;

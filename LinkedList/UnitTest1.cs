@@ -15,7 +15,7 @@ namespace LinkedListTest
             linkedList = new LinkedList();
         }
         /// <summary>
-        /// UC1 Given3s the numbers when added to linked list should be add at top.
+        /// UC2 Given3s the numbers when added to linked list should be add at top.
         /// </summary>
         [TestMethod]
         public void Given3NumbersWhenAddedToLinkedListShouldBeAddAtTop()
@@ -35,7 +35,7 @@ namespace LinkedListTest
         }
 
         /// <summary>
-        /// UC2 Givens the three numbers to linked list should be added at last.
+        /// UC3 Givens the three numbers to linked list should be added at last.
         /// </summary>
         [TestMethod]
         public void GivenThreeNumbersToLinkedListShouldBeAddedAtLast()
@@ -56,7 +56,7 @@ namespace LinkedListTest
         }
 
         /// <summary>
-        /// Adds the two element and insert at middle.
+        /// UC4 Adds the two element and insert at middle.
         /// </summary>
         [TestMethod]
         public void AddTwoElementAndInsertNewElementAtMiddle()
@@ -72,6 +72,26 @@ namespace LinkedListTest
             int secondNode = linkedList.CheckMiddleElement();
             bool result = mySecondNode.Equals(secondNode);
             Assert.IsTrue(result);
+        }
+
+        /// <summary>
+        /// UC5 Removes the first element inthe list.
+        /// </summary>
+        [TestMethod]
+        public void RemoveFirstElementIntheList()
+        {
+            int myFirstNode = 56;
+            int mySecondNode = 30;
+            int myThirdNode = 70;
+
+            linkedList.append(myFirstNode);
+            linkedList.append(mySecondNode);
+            linkedList.append(myThirdNode);
+            linkedList.pop();
+            int firstNode = linkedList.CheckFirstElement();
+            bool result = firstNode.Equals(mySecondNode);
+            Assert.IsTrue(result);
+        
         }
     }
 }
