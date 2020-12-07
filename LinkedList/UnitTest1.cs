@@ -55,5 +55,23 @@ namespace LinkedListTest
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// Adds the two element and insert at middle.
+        /// </summary>
+        [TestMethod]
+        public void AddTwoElementAndInsertNewElementAtMiddle()
+        {
+            int myFirstNode = 56;
+            int mySecondNode = 30;
+            int myThirdNode = 70;
+
+            linkedList.append(myFirstNode);
+            linkedList.append(myThirdNode);
+            linkedList.Insert(2, mySecondNode);
+
+            int secondNode = linkedList.CheckMiddleElement();
+            bool result = mySecondNode.Equals(secondNode);
+            Assert.IsTrue(result);
+        }
     }
 }

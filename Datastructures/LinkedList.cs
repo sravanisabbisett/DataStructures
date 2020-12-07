@@ -77,6 +77,43 @@ namespace Datastructures
             }
         }
 
+        /// <summary>
+        /// Inserts the specified position.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <param name="data">The data.</param>
+        public void Insert(int position, int data)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                try
+                {
+                    while (position > 2)
+                    {
+                        temp = temp.next;
+                        position--;
+                    }
+                    node.next = temp.next;
+                    temp.next = node;
+                }
+                catch (NullReferenceException)
+                {
+                    System.Console.WriteLine("Index out of bounds");
+                }
+            }
+        }
+
         public int CheckFirstElement()
         {
             return this.head.data;
